@@ -38,14 +38,19 @@ export function PlacePicker({
   const [status, setStatus] = useState<"idle" | "loading" | "ready" | "error">("idle");
   const [error, setError] = useState("");
   const [demoId, setDemoId] = useState("");
+  const [syncedAddress, setSyncedAddress] = useState(value.formattedAddress);
+
+  // Keep the text box in step with the address chosen elsewhere (e.g. a draft
+  // restored from storage). Adjusting state during render avoids the extra
+  // render pass that setting it from an effect would cause.
+  if (value.formattedAddress !== syncedAddress) {
+    setSyncedAddress(value.formattedAddress);
+    if (value.formattedAddress) setQuery(value.formattedAddress);
+  }
 
   useEffect(() => {
     onChangeRef.current = onChange;
   }, [onChange]);
-
-  useEffect(() => {
-    if (value.formattedAddress) setQuery(value.formattedAddress);
-  }, [value.formattedAddress]);
 
   useEffect(() => {
     if (!GOOGLE_MAPS_CONFIGURED || !inputRef.current) return;

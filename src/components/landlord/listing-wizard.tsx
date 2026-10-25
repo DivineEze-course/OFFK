@@ -1312,7 +1312,7 @@ function StepPublish({
       </div>
 
       <DemoNotice title="What “publish” means here">
-        The listing is written to this browser's localStorage and merged into search and
+        The listing is written to this browser&apos;s localStorage and merged into search and
         detail pages for this browser. It is not sent to a server, not visible to other
         devices, not moderated, and not a permanent publication. A production launch needs
         Supabase persistence, authenticated landlord ownership verification, moderation and
