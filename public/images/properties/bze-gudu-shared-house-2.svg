@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="corridor illustration for OFFK demo listing bze-gudu-shared-house">
+<title>corridor illustration for OFFK demo listing bze-gudu-shared-house</title>
+
+  <defs>
+    <linearGradient id="hall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F1ECDF"/>
+      <stop offset="1" stop-color="#E7DFC9"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#hall)"/>
+  <path d="M0 0 H1200 L780 470 H420 Z" fill="#B28C61" opacity="0.55"/>
+  <path d="M0 900 H1200 L780 470 H420 Z" fill="#C7A579"/>
+  <rect x="420" y="180" width="360" height="290" fill="#F1ECDF"/>
+  <rect x="500" y="250" width="200" height="220" rx="8" fill="#C2D1CE" opacity="0.55"/>
+  <rect x="500" y="250" width="200" height="220" rx="8" fill="none" stroke="#8B7A5C" stroke-width="6"/>
+  <g opacity="1">
+          <rect x="160" y="437" width="120" height="330" rx="6" fill="#B4854F"/>
+          <circle cx="264" cy="618.5" r="7" fill="#8B7A5C"/>
+          <rect x="920" y="437" width="120" height="330" rx="6" fill="#B4854F"/>
+          <circle cx="936" cy="618.5" r="7" fill="#8B7A5C"/>
+        </g><g opacity="0.9625">
+          <rect x="128.8" y="440.465" width="107.4" height="295.35" rx="6" fill="#B4854F"/>
+          <circle cx="221.88" cy="602.9075" r="6.265000000000001" fill="#8B7A5C"/>
+          <rect x="963.8" y="440.465" width="107.4" height="295.35" rx="6" fill="#B4854F"/>
+          <circle cx="978.12" cy="602.9075" r="6.265000000000001" fill="#8B7A5C"/>
+        </g><g opacity="0.925">
+          <rect x="97.6" y="443.93" width="94.80000000000001" height="260.7" rx="6" fill="#B4854F"/>
+          <circle cx="179.76" cy="587.315" r="5.53" fill="#8B7A5C"/>
+          <rect x="1007.6" y="443.93" width="94.80000000000001" height="260.7" rx="6" fill="#B4854F"/>
+          <circle cx="1020.24" cy="587.315" r="5.53" fill="#8B7A5C"/>
+        </g><g opacity="0.8875">
+          <rect x="66.4" y="447.395" width="82.2" height="226.05" rx="6" fill="#B4854F"/>
+          <circle cx="137.64" cy="571.7225" r="4.795" fill="#8B7A5C"/>
+          <rect x="1051.4" y="447.395" width="82.2" height="226.05" rx="6" fill="#B4854F"/>
+          <circle cx="1062.3600000000001" cy="571.7225" r="4.795" fill="#8B7A5C"/>
+        </g>
+  <g>
+    <rect x="560" y="120" width="80" height="14" rx="7" fill="#E4CE99"/>
+    <rect x="490" y="40" width="220" height="12" rx="6" fill="#E4CE99" opacity="0.8"/>
+    <ellipse cx="600" cy="150" rx="120" ry="40" fill="#FFF3C9" opacity="0.18"/>
+  </g>
+  <path d="M420 470 h360" stroke="#8B7A5C" stroke-width="4" opacity="0.4"/>
+  <ellipse cx="600" cy="700" rx="260" ry="40" fill="#FFFFFF" opacity="0.06"/>
+</svg>

@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="bedroom illustration for OFFK demo listing abi-katampe-one-bed">
+<title>bedroom illustration for OFFK demo listing abi-katampe-one-bed</title>
+
+  
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E9EAE6"/>
+      <stop offset="1" stop-color="#DBDED8"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#A38C71"/>
+      <stop offset="1" stop-color="#B9A489"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#wall)"/>
+  <rect y="620" width="1200" height="280" fill="url(#floor)"/>
+  <rect y="614" width="1200" height="6" fill="#78807A" opacity="0.55"/>
+  
+  <g>
+    <rect x="752" y="112" width="316" height="316" rx="6" fill="#78807A"/>
+    <rect x="760" y="120" width="300" height="300" fill="url(#sky)"/>
+    <defs>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#D6DEE1"/>
+        <stop offset="1" stop-color="#ECEFE8"/>
+      </linearGradient>
+    </defs>
+    <circle cx="976" cy="183.24" r="27" fill="#FFF7DF" opacity="0.95"/>
+    <path d="M760 306 q 54 -42.00000000000001 114 -6 q 66 -36 132 6 L1060 420 L760 420 Z" fill="#9CA79B" opacity="0.85"/>
+    <rect x="907" y="120" width="6" height="300" fill="#78807A"/>
+    <rect x="760" y="267" width="300" height="6" fill="#78807A"/>
+    <path d="M740 100 q 40 150 8 340 l -46 0 l 0 -340 Z" fill="#93A0A6" opacity="0.9"/>
+    <path d="M1080 100 q -40 150 -8 340 l 46 0 l 0 -340 Z" fill="#93A0A6" opacity="0.9"/>
+    <rect x="746" y="428" width="328" height="10" rx="3" fill="#78807A"/>
+  </g>
+  
+  <g>
+    <rect x="150.53438446534275" y="150" width="190" height="150" rx="4" fill="#FFFFFF" opacity="0.96"/>
+    <rect x="158.53438446534275" y="158" width="174" height="134" fill="#F6F3EC"/>
+    <circle cx="222.73438446534277" cy="213" r="30" fill="#93A0A6"/>
+    <path d="M162.53438446534275 284 L245.53438446534275 225 L328.5343844653428 284 Z" fill="#93A0A6"/>
+  </g>
+  
+  <g>
+    <ellipse cx="550" cy="765" rx="310" ry="65" fill="#E4E1D6" opacity="0.85"/>
+    <ellipse cx="550" cy="765" rx="288" ry="51" fill="none" stroke="#CBC5B2" stroke-width="7" opacity="0.7"/>
+  </g>
+  <g>
+    <ellipse cx="560" cy="810" rx="330" ry="22" fill="#000" opacity="0.10"/>
+    <rect x="250" y="450" width="620" height="120" rx="10" fill="#A8825E"/>
+    <rect x="266" y="366" width="588" height="110" rx="14" fill="#F7F6F0"/>
+    <rect x="266" y="430" width="588" height="150" rx="12" fill="#93A0A6"/>
+    <path d="M266 470 h588 v110 a12 12 0 0 1 -12 12 h-564 a12 12 0 0 1 -12 -12 Z" fill="#77858C" opacity="0.5"/>
+    <rect x="292" y="330" width="150" height="90" rx="16" fill="#FFFFFF" opacity="0.95"/>
+    <rect x="456" y="330" width="150" height="90" rx="16" fill="#FFFFFF" opacity="0.85"/>
+    <rect x="238" y="300" width="34" height="300" rx="8" fill="#6F4F35"/>
+    <rect x="848" y="300" width="34" height="300" rx="8" fill="#6F4F35"/>
+  </g>
+  <g>
+    <rect x="900" y="520" width="130" height="16" rx="6" fill="#6F4F35"/>
+    <rect x="912" y="536" width="12" height="86" fill="#6F4F35"/>
+    <rect x="1006" y="536" width="12" height="86" fill="#6F4F35"/>
+    <circle cx="965" cy="498" r="26" fill="#D5C9A4"/>
+    <rect x="960" y="498" width="10" height="24" fill="#78807A"/>
+  </g>
+  
+  <g transform="translate(1090 640) scale(1.15)">
+    <ellipse cx="0" cy="4" rx="46" ry="10" fill="#000" opacity="0.10"/>
+    <path d="M-28 0 h56 l-8 54 h-40 Z" fill="#BB6E4E"/>
+    <rect x="-32" y="-8" width="64" height="14" rx="5" fill="#BB6E4E" opacity="0.85"/>
+    <path d="M0 -4 C -6 -60 -44 -74 -52 -66 C -58 -58 -34 -34 -2 -30 Z" fill="#7DA079"/>
+    <path d="M0 -6 C 8 -78 46 -92 56 -82 C 62 -72 30 -36 4 -30 Z" fill="#5B7E58"/>
+    <path d="M-2 -8 C -2 -84 10 -108 20 -104 C 28 -100 12 -50 4 -30 Z" fill="#7DA079"/>
+  </g>
+  <rect x="0" y="620" width="1200" height="10" fill="#000" opacity="0.05"/>
+</svg>

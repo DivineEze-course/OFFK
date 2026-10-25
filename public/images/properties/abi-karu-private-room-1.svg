@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="bedroom illustration for OFFK demo listing abi-karu-private-room">
+<title>bedroom illustration for OFFK demo listing abi-karu-private-room</title>
+
+  
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F1ECDF"/>
+      <stop offset="1" stop-color="#E7DFC9"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#B28C61"/>
+      <stop offset="1" stop-color="#C7A579"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#wall)"/>
+  <rect y="620" width="1200" height="280" fill="url(#floor)"/>
+  <rect y="614" width="1200" height="6" fill="#8B7A5C" opacity="0.55"/>
+  
+  <g>
+    <rect x="752" y="112" width="316" height="316" rx="6" fill="#8B7A5C"/>
+    <rect x="760" y="120" width="300" height="300" fill="url(#sky)"/>
+    <defs>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#DEE5E2"/>
+        <stop offset="1" stop-color="#F4EDDC"/>
+      </linearGradient>
+    </defs>
+    <circle cx="976" cy="183.24" r="27" fill="#FFF7DF" opacity="0.95"/>
+    <path d="M760 306 q 54 -42.00000000000001 114 -6 q 66 -36 132 6 L1060 420 L760 420 Z" fill="#AFAE8C" opacity="0.85"/>
+    <rect x="907" y="120" width="6" height="300" fill="#8B7A5C"/>
+    <rect x="760" y="267" width="300" height="6" fill="#8B7A5C"/>
+    <path d="M740 100 q 40 150 8 340 l -46 0 l 0 -340 Z" fill="#D6B36B" opacity="0.9"/>
+    <path d="M1080 100 q -40 150 -8 340 l 46 0 l 0 -340 Z" fill="#D6B36B" opacity="0.9"/>
+    <rect x="746" y="428" width="328" height="10" rx="3" fill="#8B7A5C"/>
+  </g>
+  
+  <g>
+    <rect x="150.51325326833245" y="150" width="190" height="150" rx="4" fill="#FFFFFF" opacity="0.96"/>
+    <rect x="158.51325326833245" y="158" width="174" height="134" fill="#F6F3EC"/>
+    <circle cx="222.71325326833244" cy="213" r="30" fill="#D8A05B"/>
+    <path d="M162.51325326833245 284 L245.51325326833245 225 L328.51325326833245 284 Z" fill="#D8A05B"/>
+  </g>
+  
+  <g>
+    <ellipse cx="550" cy="765" rx="310" ry="65" fill="#EAE0C6" opacity="0.85"/>
+    <ellipse cx="550" cy="765" rx="288" ry="51" fill="none" stroke="#D3BF95" stroke-width="7" opacity="0.7"/>
+  </g>
+  <g>
+    <ellipse cx="560" cy="810" rx="330" ry="22" fill="#000" opacity="0.10"/>
+    <rect x="250" y="450" width="620" height="120" rx="10" fill="#B4854F"/>
+    <rect x="266" y="366" width="588" height="110" rx="14" fill="#FBF7EC"/>
+    <rect x="266" y="430" width="588" height="150" rx="12" fill="#D6B36B"/>
+    <path d="M266 470 h588 v110 a12 12 0 0 1 -12 12 h-564 a12 12 0 0 1 -12 -12 Z" fill="#BC9751" opacity="0.5"/>
+    <rect x="292" y="330" width="150" height="90" rx="16" fill="#FFFFFF" opacity="0.95"/>
+    <rect x="456" y="330" width="150" height="90" rx="16" fill="#FFFFFF" opacity="0.85"/>
+    <rect x="238" y="300" width="34" height="300" rx="8" fill="#7A5730"/>
+    <rect x="848" y="300" width="34" height="300" rx="8" fill="#7A5730"/>
+  </g>
+  <g>
+    <rect x="900" y="520" width="130" height="16" rx="6" fill="#7A5730"/>
+    <rect x="912" y="536" width="12" height="86" fill="#7A5730"/>
+    <rect x="1006" y="536" width="12" height="86" fill="#7A5730"/>
+    <circle cx="965" cy="498" r="26" fill="#E4CE99"/>
+    <rect x="960" y="498" width="10" height="24" fill="#8B7A5C"/>
+  </g>
+  
+  <g transform="translate(1090 640) scale(1.15)">
+    <ellipse cx="0" cy="4" rx="46" ry="10" fill="#000" opacity="0.10"/>
+    <path d="M-28 0 h56 l-8 54 h-40 Z" fill="#BC6A45"/>
+    <rect x="-32" y="-8" width="64" height="14" rx="5" fill="#BC6A45" opacity="0.85"/>
+    <path d="M0 -4 C -6 -60 -44 -74 -52 -66 C -58 -58 -34 -34 -2 -30 Z" fill="#84A066"/>
+    <path d="M0 -6 C 8 -78 46 -92 56 -82 C 62 -72 30 -36 4 -30 Z" fill="#617E4B"/>
+    <path d="M-2 -8 C -2 -84 10 -108 20 -104 C 28 -100 12 -50 4 -30 Z" fill="#84A066"/>
+  </g>
+  <rect x="0" y="620" width="1200" height="10" fill="#000" opacity="0.05"/>
+</svg>

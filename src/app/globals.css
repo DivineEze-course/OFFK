@@ -1,0 +1,276 @@
+@import "tailwindcss";
+
+/* Theme is class-driven (.dark on <html>) so it persists across navigations and
+   can be flipped before first paint by the inline script in app/layout.tsx. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ---------------------------------------------------------------
+   OFFK design tokens
+   Light and dark are deliberately designed, not inverted:
+   light = warm off-white editorial paper, dark = deep forest night.
+   --------------------------------------------------------------- */
+:root {
+  color-scheme: light;
+
+  /* Surfaces */
+  --c-canvas: #f7f7f2;
+  --c-surface: #ffffff;
+  --c-surface-2: #f1f1ea;
+  --c-surface-3: #e9eae0;
+
+  /* Ink */
+  --c-ink: #142c24;
+  --c-ink-muted: #55625a;
+  --c-ink-faint: #7c8a81;
+
+  /* Lines */
+  --c-line: #e3e4d9;
+  --c-line-strong: #cdd0c1;
+
+  /* Brand */
+  --c-brand: #142c24;
+  --c-on-brand: #f7f7f2;
+  --c-accent: #d5f36a;
+  --c-accent-strong: #c4e255;
+  --c-on-accent: #142c24;
+
+  /* Primary action flips between brand-green (light) and lime (dark) */
+  --c-btn-primary-bg: #142c24;
+  --c-btn-primary-fg: #f7f7f2;
+  --c-btn-primary-bg-hover: #1d4034;
+  --c-btn-primary-fg-hover: #ffffff;
+
+  /* Secondary (outlined) action */
+  --c-btn-outline-border: #c9cec0;
+
+  /* Status */
+  --c-success: #226644;
+  --c-success-soft: #e2f0e6;
+  --c-warning: #8a5b12;
+  --c-warning-soft: #f6edd9;
+  --c-danger: #9c3b33;
+  --c-danger-soft: #f6e3e1;
+  --c-info: #2b6076;
+  --c-info-soft: #e0edf2;
+
+  --c-focus: #142c24;
+
+  /* Map surface */
+  --c-map-bg: #e8ece5;
+}
+
+.dark {
+  color-scheme: dark;
+
+  --c-canvas: #101713;
+  --c-surface: #19231d;
+  --c-surface-2: #1f2b24;
+  --c-surface-3: #26332b;
+
+  --c-ink: #edf3ea;
+  --c-ink-muted: #a4b2a8;
+  --c-ink-faint: #7e8d83;
+
+  --c-line: #2b3a31;
+  --c-line-strong: #3c4d42;
+
+  --c-brand: #d5f36a;
+  /* Brand flips to lime in dark, so its foreground must flip to forest ink. */
+  --c-on-brand: #142c24;
+  --c-on-accent: #142c24;
+  --c-accent: #d5f36a;
+  --c-accent-strong: #e2fa8c;
+
+  --c-btn-primary-bg: #d5f36a;
+  --c-btn-primary-fg: #142c24;
+  --c-btn-primary-bg-hover: #e2fa8c;
+  --c-btn-primary-fg-hover: #0d1d17;
+
+  --c-btn-outline-border: #3c4d42;
+
+  --c-success: #8fd6a8;
+  --c-success-soft: #1b3226;
+  --c-warning: #e8c37a;
+  --c-warning-soft: #33290f;
+  --c-danger: #f0a49b;
+  --c-danger-soft: #3a1f1c;
+  --c-info: #9ecfe0;
+  --c-info-soft: #142b33;
+
+  --c-focus: #d5f36a;
+
+  --c-map-bg: #141d18;
+}
+
+@theme inline {
+  --color-canvas: var(--c-canvas);
+  --color-surface: var(--c-surface);
+  --color-surface-2: var(--c-surface-2);
+  --color-surface-3: var(--c-surface-3);
+
+  --color-ink: var(--c-ink);
+  --color-muted: var(--c-ink-muted);
+  --color-faint: var(--c-ink-faint);
+
+  --color-line: var(--c-line);
+  --color-line-strong: var(--c-line-strong);
+
+  --color-brand: var(--c-brand);
+  --color-on-brand: var(--c-on-brand);
+  --color-accent: var(--c-accent);
+  --color-accent-strong: var(--c-accent-strong);
+  --color-on-accent: var(--c-on-accent);
+
+  --color-btn-primary-bg: var(--c-btn-primary-bg);
+  --color-btn-primary-fg: var(--c-btn-primary-fg);
+  --color-btn-primary-bg-hover: var(--c-btn-primary-bg-hover);
+  --color-btn-primary-fg-hover: var(--c-btn-primary-fg-hover);
+  --color-btn-outline-border: var(--c-btn-outline-border);
+
+  --color-success: var(--c-success);
+  --color-success-soft: var(--c-success-soft);
+  --color-warning: var(--c-warning);
+  --color-warning-soft: var(--c-warning-soft);
+  --color-danger: var(--c-danger);
+  --color-danger-soft: var(--c-danger-soft);
+  --color-info: var(--c-info);
+  --color-info-soft: var(--c-info-soft);
+
+  --color-focus: var(--c-focus);
+  --color-map-bg: var(--c-map-bg);
+
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, "Segoe UI", sans-serif;
+  --font-display: "Space Grotesk", "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* ---------------------------------------------------------------
+   Base
+   --------------------------------------------------------------- */
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--c-canvas);
+  color: var(--c-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--c-accent);
+  color: var(--c-on-accent);
+}
+
+/* Consistent, visible keyboard focus in both themes. */
+:focus-visible {
+  outline: 2px solid var(--c-focus);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* ---------------------------------------------------------------
+   Utilities
+   --------------------------------------------------------------- */
+
+/* Shared page gutter — keeps every route aligned. */
+@utility page-container {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 80rem;
+  padding-inline: 1.25rem;
+
+  @media (min-width: 48rem) {
+    padding-inline: 2.5rem;
+  }
+}
+
+/* Hide the horizontal scrollbar on filter chip rails without breaking scroll. */
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Demo-data notice strip used across detail pages and dashboards. */
+@utility demo-strip {
+  background-color: var(--c-warning-soft);
+  color: var(--c-warning);
+}
+
+/* Dashed route line drawn between campus and property pins on the demo map. */
+.route-line {
+  stroke-dasharray: 10 8;
+}
+
+/* Custom Leaflet pin markers, themed from the same tokens as the page. */
+.offk-pin {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--c-surface);
+  border-radius: 9999px;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.28);
+}
+
+.offk-pin-campus {
+  background: var(--c-btn-primary-bg);
+}
+
+.offk-pin-property {
+  position: relative;
+  background: var(--c-accent-strong);
+}
+
+.offk-pin-property::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border-radius: 9999px;
+  background: var(--c-on-accent);
+}
+
+/* Leaflet inherits page typography; pin labels use our tokens. */
+.leaflet-container {
+  font-family: var(--font-sans);
+  background-color: var(--c-map-bg);
+}
+
+.leaflet-control-attribution {
+  background-color: color-mix(in srgb, var(--c-surface) 88%, transparent) !important;
+  color: var(--c-ink-muted) !important;
+  font-size: 0.6875rem !important;
+}
+
+.leaflet-control-attribution a {
+  color: var(--c-ink-muted) !important;
+}
+
+/* Soft entrance animation — disabled entirely under prefers-reduced-motion. */
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.animate-rise {
+  animation: rise-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

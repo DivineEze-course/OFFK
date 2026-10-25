@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="workspace illustration for OFFK demo listing bze-gudu-shared-house">
+<title>workspace illustration for OFFK demo listing bze-gudu-shared-house</title>
+
+  
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F1ECDF"/>
+      <stop offset="1" stop-color="#E7DFC9"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#B28C61"/>
+      <stop offset="1" stop-color="#C7A579"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#wall)"/>
+  <rect y="620" width="1200" height="280" fill="url(#floor)"/>
+  <rect y="614" width="1200" height="6" fill="#8B7A5C" opacity="0.55"/>
+  
+  <g>
+    <rect x="782" y="112" width="306" height="296" rx="6" fill="#8B7A5C"/>
+    <rect x="790" y="120" width="290" height="280" fill="url(#sky)"/>
+    <defs>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#DEE5E2"/>
+        <stop offset="1" stop-color="#F4EDDC"/>
+      </linearGradient>
+    </defs>
+    <circle cx="998.8" cy="179.024" r="25.2" fill="#FFF7DF" opacity="0.95"/>
+    <path d="M790 293.6 q 52.199999999999996 -39.2 110.2 -5.6000000000000005 q 63.8 -33.6 127.6 5.6000000000000005 L1080 400 L790 400 Z" fill="#AFAE8C" opacity="0.85"/>
+    <rect x="932" y="120" width="6" height="280" fill="#8B7A5C"/>
+    <rect x="790" y="257" width="290" height="6" fill="#8B7A5C"/>
+    
+    <rect x="776" y="408" width="318" height="10" rx="3" fill="#8B7A5C"/>
+  </g>
+  <g>
+    <rect x="150" y="200" width="420" height="18" rx="8" fill="#7A5730"/>
+    <rect x="170" y="120" width="46" height="80" rx="6" fill="#D8A05B" opacity="0.9"/>
+    <rect x="232" y="140" width="40" height="60" rx="6" fill="#9DAE97" opacity="0.9"/>
+    <rect x="288" y="106" width="52" height="94" rx="6" fill="#C4744C" opacity="0.9"/>
+    
+  <g transform="translate(420 196) scale(0.6)">
+    <ellipse cx="0" cy="4" rx="46" ry="10" fill="#000" opacity="0.10"/>
+    <path d="M-28 0 h56 l-8 54 h-40 Z" fill="#BC6A45"/>
+    <rect x="-32" y="-8" width="64" height="14" rx="5" fill="#BC6A45" opacity="0.85"/>
+    <path d="M0 -4 C -6 -60 -44 -74 -52 -66 C -58 -58 -34 -34 -2 -30 Z" fill="#84A066"/>
+    <path d="M0 -6 C 8 -78 46 -92 56 -82 C 62 -72 30 -36 4 -30 Z" fill="#617E4B"/>
+    <path d="M-2 -8 C -2 -84 10 -108 20 -104 C 28 -100 12 -50 4 -30 Z" fill="#84A066"/>
+  </g>
+  </g>
+  <g>
+    <ellipse cx="520" cy="812" rx="330" ry="20" fill="#000" opacity="0.10"/>
+    <rect x="170" y="560" width="700" height="24" rx="10" fill="#B4854F"/>
+    <rect x="190" y="584" width="18" height="200" fill="#7A5730"/>
+    <rect x="832" y="584" width="18" height="200" fill="#7A5730"/>
+    <rect x="600" y="584" width="230" height="120" rx="8" fill="#A08D68"/>
+    <line x1="715" y1="584" x2="715" y2="704" stroke="#8B7A5C" stroke-width="4" opacity="0.5"/>
+    <rect x="330" y="440" width="240" height="120" rx="10" fill="#7A5730"/>
+    <rect x="344" y="452" width="212" height="96" rx="6" fill="#C2D1CE"/>
+    <rect x="420" y="560" width="60" height="10" rx="5" fill="#8B7A5C"/>
+    <rect x="200" y="500" width="110" height="60" rx="10" fill="#FBF7EC"/>
+    <rect x="640" y="510" width="90" height="50" rx="8" fill="#BC6A45"/>
+    <line x1="685" y1="510" x2="685" y2="470" stroke="#8B7A5C" stroke-width="6"/>
+    <path d="M655 470 h60 l-10 -26 h-40 Z" fill="#E4CE99"/>
+  </g>
+  <g>
+    <rect x="360" y="620" width="180" height="20" rx="10" fill="#D6B36B"/>
+    <rect x="372" y="640" width="20" height="150" rx="8" fill="#BC9751"/>
+    <rect x="508" y="640" width="20" height="150" rx="8" fill="#BC9751"/>
+    <rect x="372" y="612" width="156" height="90" rx="18" fill="#D6B36B"/>
+  </g>
+  
+  <g>
+    <ellipse cx="550" cy="810" rx="250" ry="50" fill="#EAE0C6" opacity="0.85"/>
+    <ellipse cx="550" cy="810" rx="228" ry="36" fill="none" stroke="#D3BF95" stroke-width="7" opacity="0.7"/>
+  </g>
+</svg>
