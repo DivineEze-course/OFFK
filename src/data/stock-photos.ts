@@ -24,33 +24,39 @@ const room = (file: string, scene: string) =>
     `Demo stock photo of ${scene}. Illustrative only — not a photo of this specific room.`,
   );
 
+/**
+ * Stock photos cannot show how many beds a specific room has, so every photo
+ * is shown with an "Illustrative stock photo" badge. The alt text below
+ * describes only what is actually visible in each file — it does not claim the
+ * photo matches the room's capacity. No file is reused across capacities, so
+ * switching room type always switches the picture.
+ */
 export const STOCK_ROOM_PHOTOS: Record<RoomCapacity, PropertyImage[]> = {
   1: [
-    room("room-1-a", "a single bed beside a wooden cabinet"),
-    room("room-1-b", "a compact, freshly made single room"),
-    room("room-1-c", "a single bedroom with soft daylight"),
+    room("room-1-a", "a large hotel-style bedroom with a double bed and wooden wardrobes"),
+    room("room-1-b", "a close-up of a made bed with white linen and a wall light"),
+    room("room-1-c", "a hotel-style bedroom with a double bed and a dark headboard"),
   ],
   2: [
-    room("room-2-a", "two single beds in a well-lit shared room"),
-    room("room-2-b", "a twin room with matching beds and warm bedding"),
-    room("room-2-c", "a twin bedroom with bedside storage"),
+    room("room-2-a", "two single beds with grey headboards in a bright bedroom"),
+    room("room-2-b", "two beds with grey patterned headboards, a bedside lamp and a folded towel arrangement"),
+    room("room-2-c", "twin beds with wooden headboards, a bedside table and a folded bathrobe"),
   ],
   3: [
-    room("room-3-b", "a shared bedroom with multiple beds and soft textiles"),
-    room("room-3-a", "a shared room with beds arranged for small groups"),
-    room("room-3-c", "a compact shared bedroom with a wardrobe"),
+    room("room-3-b", "a bedroom with two beds, colourful bedding and a wooden desk"),
+    room("room-3-a", "a bedroom with two single beds and folded towels against a patterned wall"),
+    room("room-3-c", "a bedroom with a bed in yellow sheets beside a wooden wardrobe"),
   ],
   4: [
-    room("room-4-a", "bunk beds in a tidy shared dormitory"),
-    room("room-4-b", "a clean shared dormitory with bunk beds"),
+    room("room-4-a", "white bunk beds with clothes hanging beside them"),
+    room("room-4-b", "white bunk beds with curtains in a hostel-style dormitory"),
   ],
   5: [
-    room("room-5-a", "a hostel room with bunk beds and individual lighting"),
-    room("room-5-b", "a shared dormitory with wooden bunk beds"),
+    room("room-5-a", "a numbered dormitory door beside white bunk beds"),
+    room("room-5-b", "a large dormitory with rows of wooden bunk beds"),
   ],
   6: [
-    room("room-6-a", "a simple shared bedroom with multiple beds"),
-    room("room-5-b", "a shared dormitory with wooden bunk beds"),
+    room("room-6-a", "an empty bedroom with a ceiling fan, a wardrobe opening and wood flooring"),
   ],
 };
 

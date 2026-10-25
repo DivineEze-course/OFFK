@@ -4,6 +4,8 @@ import { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight, Images, X } from "lucide-react";
 import type { PropertyImage } from "@/types/property";
+import { illustrativeLabel } from "@/lib/rooms";
+import { DemoBadge } from "@/components/ui/badge";
 import { cn } from "@/lib/cn";
 
 /**
@@ -15,6 +17,7 @@ export function PropertyGallery({ images, title }: { images: PropertyImage[]; ti
   const [lightboxOpen, setLightboxOpen] = useState(false);
 
   const active = images[activeIndex];
+  const activeLabel = active ? illustrativeLabel(active) : null;
 
   const close = useCallback(() => setLightboxOpen(false), []);
   const step = useCallback(
@@ -60,6 +63,12 @@ export function PropertyGallery({ images, title }: { images: PropertyImage[]; ti
               sizes="(min-width: 1024px) 60vw, 94vw"
               className="object-cover"
             />
+            {activeLabel ? (
+              <DemoBadge
+                label={activeLabel}
+                className="absolute top-3 left-3 max-w-[calc(100%-1.5rem)] bg-canvas/95 whitespace-normal"
+              />
+            ) : null}
             <span className="absolute right-3 bottom-3 inline-flex items-center gap-1.5 rounded-lg bg-canvas/95 px-2.5 py-1.5 text-xs font-medium text-ink opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100">
               <Images className="size-3.5" aria-hidden="true" />
               View all {images.length}
@@ -156,6 +165,12 @@ export function PropertyGallery({ images, title }: { images: PropertyImage[]; ti
           </div>
 
           <div className="shrink-0 border-t border-line px-4 py-4 sm:px-6">
+            {activeLabel ? (
+              <p className="mx-auto mb-1.5 max-w-3xl text-center text-xs font-medium text-warning">
+                {activeLabel}
+                {active.credit ? <span className="font-normal text-faint"> · {active.credit}</span> : null}
+              </p>
+            ) : null}
             <p className="mx-auto max-w-3xl text-center text-xs text-faint">{active.alt}</p>
           </div>
         </div>

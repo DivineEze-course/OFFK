@@ -9,6 +9,7 @@ import type {
   BathroomArrangement,
   PricingBasis,
   Property,
+  PropertyImage,
   RoomCapacity,
   RoomConfiguration,
   RoomPrice,
@@ -380,4 +381,78 @@ export function bathroomLabel(value: BathroomArrangement): string {
 
 export function roomBedsLabel(room: RoomConfiguration): string {
   return room.bedConfiguration || `${room.capacity} bed spaces`;
+}
+
+/** "per person" / "per room" — every price shown in the UI is suffixed with this. */
+export function pricingBasisLabel(basis: PricingBasis): string {
+  return basis === "per-person" ? "per person" : "per room";
+}
+
+/**
+ * Plain-language availability line that keeps capacity and vacancy apart,
+ * e.g. "1 of 8 spaces free" — never "Room of 1".
+ */
+export function spacesSummary(room: RoomConfiguration): string {
+  const view = roomAvailability(room);
+  const noun = view.availableBeds === 1 ? "space" : "spaces";
+  if (view.inventoryBeds != null) {
+    return `${view.availableBeds} of ${view.inventoryBeds} ${view.inventoryBeds === 1 ? "space" : "spaces"} free`;
+  }
+  return `${view.availableBeds} ${noun} free`;
+}
+
+const GRADE_ORDER =["standard", "premium", "executive", "ensuite", "deluxe", "special"];
+
+/**
+ * Display order for a property's rooms: smallest capacity first, then grade.
+ * Returns a new array; the property's own order is never mutated.
+ */
+export function sortRooms(rooms: RoomConfiguration[]): RoomConfiguration[] {
+  return [...rooms].sort((a, b) => {
+    if (a.capacity !== b.capacity) return a.capacity - b.capacity;
+    const gradeDelta = GRADE_ORDER.indexOf(a.grade) - GRADE_ORDER.indexOf(b.grade);
+    return gradeDelta !== 0 ? gradeDelta : a.name.localeCompare(b.name);
+  });
+}
+
+/** Shown wherever a room type has no photographs. Never replaced by another room's photo. */
+export const NO_ROOM_PHOTOS_MESSAGE = "No photos have been uploaded for this room type yet.";
+
+export interface RoomPhotoSet {
+  photos: PropertyImage[];
+  /** `true` when this room has no photographs at all — show the empty state. */
+  isEmpty: boolean;
+  /** `true` when every photo is a labelled demo/stock image rather than a landlord upload. */
+  allIllustrative: boolean;
+}
+
+/**
+ * The photographs belonging to one room configuration and nothing else. When
+ * the room has none this returns an empty set; callers must not fall back to
+ * the property's or another room's photographs.
+ */
+export function roomPhotoSet(room: RoomConfiguration | undefined): RoomPhotoSet {
+  const photos = room?.photos ?? [];
+  return {
+    photos,
+    isEmpty: photos.length === 0,
+    allIllustrative: photos.length > 0 && photos.every((photo) => photo.isDemo === true),
+  };
+}
+
+/** Whether an image must carry a visible "illustrative" label. */
+export function isIllustrativePhoto(image: PropertyImage): boolean {
+  return image.isDemo === true || image.kind === "photo" || image.kind === "illustration";
+}
+
+/**
+ * The visible label for an illustrative image, or `null` for a landlord's own
+ * upload. Stock photos and drawn illustrations are labelled differently so
+ * nobody mistakes either for a photograph of the actual property.
+ */
+export function illustrativeLabel(image: PropertyImage): string | null {
+  if (!isIllustrativePhoto(image)) return null;
+  return image.kind === "illustration"
+    ? "Demo illustration — not a photo"
+    : "Illustrative photo — not this property";
 }
